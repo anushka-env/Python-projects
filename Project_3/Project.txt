@@ -1,0 +1,37 @@
+📚 Student Report Card Management System
+
+The Student Report Card Management System is a beginner-friendly Python project designed to manage student academic records efficiently through a command-line interface. The application allows users to store and organize student information, calculate academic performance, assign grades, determine pass/fail status based on individual subject marks, search for students, and display the class topper.
+
+✨ Features
+Add multiple student records
+Store student name and roll number
+Record marks for five subjects
+Automatically calculate:
+Total Marks
+Percentage
+Grade (A+ to F)
+Pass/Fail Status
+Display all student records
+Search students by:
+Roll Number
+Name
+Identify the class topper
+Menu-driven command-line interface
+🛠 Technologies Used
+Python
+Lists
+Loops
+Conditional Statements
+User Input Handling
+Basic Searching Algorithms
+📖 Learning Outcomes
+
+This project helped strengthen concepts such as:
+
+Data storage using lists
+Menu-driven program design
+Looping and conditional logic
+Searching records
+Percentage and grade calculation
+Building a real-world console application
+

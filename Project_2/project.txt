@@ -1,0 +1,22 @@
+ATM Simulator is a beginner-friendly Python project that mimics the basic functionality of an Automated Teller Machine (ATM). The program requires PIN authentication before granting access to banking services. Once authenticated, users can perform common ATM operations through an interactive menu.
+
+Features:
+
+Secure PIN authentication (maximum 3 attempts)
+Check account balance
+Deposit money
+Withdraw money with balance validation
+Invalid input handling
+Menu-driven interface using loops
+Graceful exit option
+
+Concepts Used:
+
+while loops
+Nested loops
+if-elif-else statements
+Variables
+User input
+Basic banking logic
+
+Tech Stack: Python
