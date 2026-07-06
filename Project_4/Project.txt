@@ -1,0 +1,31 @@
+🍽 Restaurant Ordering System 
+
+A console-based Restaurant Ordering System developed using Python. This project allows customers to place food orders, manage their cart, generate bills with GST, and save order history using file handling.
+
+✨ Features
+Display restaurant menu
+Place food orders
+View cart
+Remove items from cart
+Generate bill with 5% GST
+Save orders to a text file
+View previous order history
+Handle invalid inputs using exception handling
+
+🛠 Technologies Used
+Python
+Functions
+Lists
+Tuples
+Dictionaries
+Sets
+File Handling
+Exception Handling
+
+📂 Project Highlights
+Console-based menu-driven application
+Stores menu using tuples
+Uses lists and dictionaries for cart and customer details
+Maintains unique ordered items using sets
+Saves order history in orders.txt
+User-friendly and beginner-friendly implementation
