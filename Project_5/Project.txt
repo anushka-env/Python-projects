@@ -1,1 +1,15 @@
+📚 Library Management System
+
+A console-based Python project that allows users to manage books in a library. Users can view available books, borrow books, return borrowed books, add new books with quantities, and maintain transaction logs using file handling.
+
+Features:
+• View available books and quantities
+• Borrow and return books
+• Display borrowed books
+• Add new books dynamically
+• Store transactions in a text file
+• Exception handling for invalid inputs
+
+Concepts Used:
+Python Functions, Lists, Dictionaries, Loops, Conditional Statements, File Handling, Exception Handling, and Menu-Driven Programming.
 
