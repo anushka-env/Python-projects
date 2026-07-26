@@ -10,7 +10,7 @@ wheat_price = wheat_qty * 40
 sugar_price = sugar_qty * 50
 milk_price = milk_qty * 30
 total = rice_price + wheat_price + sugar_price + milk_price
-gst = 12
+
 
 print("\n ======= Grocery Bill ======= \n")
 print("Customer name: ",name)
