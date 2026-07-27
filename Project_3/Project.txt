@@ -1,37 +1,30 @@
-📚 Student Report Card Management System
+Student Report Card Management System
 
-The Student Report Card Management System is a beginner-friendly Python project designed to manage student academic records efficiently through a command-line interface. The application allows users to store and organize student information, calculate academic performance, assign grades, determine pass/fail status based on individual subject marks, search for students, and display the class topper.
+The Student Report Card Management System is a beginner-friendly Python project that simulates a simple student record management application. Users can add student details and subject-wise marks, and the program automatically calculates the total marks, percentage, grade, and pass/fail status. It also provides options to search for students and identify the class topper through a menu-driven interface.
 
-✨ Features
-Add multiple student records
-Store student name and roll number
-Record marks for five subjects
-Automatically calculate:
-Total Marks
-Percentage
-Grade (A+ to F)
-Pass/Fail Status
-Display all student records
-Search students by:
-Roll Number
-Name
-Identify the class topper
-Menu-driven command-line interface
-🛠 Technologies Used
-Python
-Lists
+This project helps in understanding:
+
+User input handling
+Lists and data storage
+Conditional statements
 Loops
-Conditional Statements
-User Input Handling
-Basic Searching Algorithms
-📖 Learning Outcomes
+Functions
+Searching techniques
+Arithmetic calculations
+Menu-driven application development
 
-This project helped strengthen concepts such as:
+Tech Stack: Python
 
-Data storage using lists
-Menu-driven program design
-Looping and conditional logic
-Searching records
-Percentage and grade calculation
-Building a real-world console application
+Features:
 
+Add multiple student records
+Stores student details using Python lists
+Calculates total marks and percentage
+Assigns grades based on percentage
+Determines pass/fail status based on individual subject marks
+Displays all student records
+Search student by Roll Number
+Search student by Name
+Displays the Class Topper
+Uses functions to reduce code duplication and improve readability
+Simple and user-friendly command-line interface

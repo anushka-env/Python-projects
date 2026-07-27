@@ -15,13 +15,54 @@ percentages = []
 
 num_of_stu = 0
 
+#grading 
+def grade(i):
+    if 90 <= percentages[i] <= 100:
+        return "A+"
+    elif 80 <= percentages[i] < 90:
+        return "A"
+    elif 70 <= percentages[i] < 80:
+        return "B"
+    elif 60 <= percentages[i] < 70:
+        return  "C"
+    elif 40 <= percentages[i] < 60:
+        return "D"
+    else:
+        return "F"
+
+def status(i):
+    if (python_marks[i] < 33 or
+        java_marks[i] < 33 or
+        maths_marks[i] < 33 or
+        dbe_marks[i] < 33 or
+        dccn_marks[i] < 33):
+        return "FAIL"
+    else:
+        return "PASS"
+
+def show_report(i):
+    print("Name       :", names[i])
+    print("Roll No    :", rolls[i])
+    print("DCCN       :", dccn_marks[i])
+    print("DBE        :", dbe_marks[i])
+    print("Python     :", python_marks[i])
+    print("Java       :", java_marks[i])
+    print("Maths      :", maths_marks[i])
+    print("Total      :", totals[i])
+    print("Percentage :", percentages[i], "%")
+    print("Grade      :", grade(i))
+    print("Status     :", status(i))
+    print("-" * 35)
+
+# Main Program
 while True:
-    print(" === Student Report Card === \n")
+    print("\n === Student Report Card === \n")
     print("1. Add students")
     print("2. Show All Students")
     print("3. Search Student")
     print("4. Class Topper")
     print("5. Exit")
+
     ch = int(input("Enter your choice: "))
 
     if ch == 1:
@@ -55,52 +96,20 @@ while True:
             percentage = total/5
             percentages.append(percentage)
 
+        print("\nStudent details added successfully.\n")
+
 
     elif ch == 2:
         
-        if len(names) == 0:
+        if len(names) == 0:   #returns total number of students
             print("\nNo student record found.\n")
         else:
             print("=" * 35)
             print("   STUDENTS DETAILS ")
             print("=" * 35)
-            for i in range(len(names)):
+            for i in range(len(names)): 
+                show_report(i)
 
-                #grading 
-                if 90 <= percentages[i] <= 100:
-                    grade = "A+"
-                elif 80 <= percentages[i] < 90:
-                    grade = "A"
-                elif 70 <= percentages[i] < 80:
-                    grade = "B"
-                elif 60 <= percentages[i] < 70:
-                    grade = "C"
-                elif 40 <= percentages[i] < 60:
-                    grade = "D"
-                else:
-                    grade = "F"
-
-                if (python_marks[i] < 33 or
-                    java_marks[i] < 33 or
-                    maths_marks[i] < 33 or
-                    dbe_marks[i] < 33 or
-                    dccn_marks[i] < 33):
-                    status = "FAIL"
-                else:
-                    status = "PASS"
-
-                print("Name       :", names[i])
-                print("Roll No    :", rolls[i])
-                print("DCCN       :", dccn_marks[i])
-                print("DBE        :", dbe_marks[i])
-                print("Python     :", python_marks[i])
-                print("Java       :", java_marks[i])
-                print("Maths      :", maths_marks[i])
-                print("Total      :", totals[i])
-                print("Percentage :", percentages[i], "%")
-                print("Grade      :", grade)
-                print("Status     :", status)
-                print("-" * 35)
 
     elif ch == 3:
 
@@ -109,7 +118,7 @@ while True:
             continue
 
         else:
-            found = False
+            found = False   #its a check
 
         print("1. Search by Roll Number")
         print("2. Search by Name")
@@ -121,87 +130,16 @@ while True:
             for i in range(len(names)):
                 if srch == rolls[i]:
                     found = True
+                    show_report(i)
 
-                    # grading
-                    if 90 <= percentages[i] <= 100:
-                        grade = "A+"
-                    elif 80 <= percentages[i] < 90:
-                        grade = "A"
-                    elif 70 <= percentages[i] < 80:
-                        grade = "B"
-                    elif 60 <= percentages[i] < 70:
-                        grade = "C"
-                    elif 40 <= percentages[i] < 60:
-                        grade = "D"
-                    else:
-                        grade = "F"
-
-                    # status
-                    if (python_marks[i] < 33 or
-                        java_marks[i] < 33 or
-                        maths_marks[i] < 33 or
-                        dbe_marks[i] < 33 or
-                        dccn_marks[i] < 33):
-                        status = "FAIL"
-                    else:
-                        status = "PASS"
-
-                    print("Name       :", names[i])
-                    print("Roll No    :", rolls[i])
-                    print("DCCN       :", dccn_marks[i])
-                    print("DBE        :", dbe_marks[i])
-                    print("Python     :", python_marks[i])
-                    print("Java       :", java_marks[i])
-                    print("Maths      :", maths_marks[i])
-                    print("Total      :", totals[i])
-                    print("Percentage :", percentages[i], "%")
-                    print("Grade      :", grade)
-                    print("Status     :", status)
-                    print("-" * 35)
-
+                    
         elif choice == 2:
             srch = input("Enter Name: ")
 
             for i in range(len(names)):
                 if srch.lower() == names[i].lower():
                     found = True
-
-                    # grading
-                    if 90 <= percentages[i] <= 100:
-                        grade = "A+"
-                    elif 80 <= percentages[i] < 90:
-                        grade = "A"
-                    elif 70 <= percentages[i] < 80:
-                        grade = "B"
-                    elif 60 <= percentages[i] < 70:
-                        grade = "C"
-                    elif 40 <= percentages[i] < 60:
-                        grade = "D"
-                    else:
-                        grade = "F"
-
-                    # status
-                    if (python_marks[i] < 33 or
-                        java_marks[i] < 33 or
-                        maths_marks[i] < 33 or
-                        dbe_marks[i] < 33 or
-                        dccn_marks[i] < 33):
-                        status = "FAIL"
-                    else:
-                        status = "PASS"
-
-                    print("Name       :", names[i])
-                    print("Roll No    :", rolls[i])
-                    print("DCCN       :", dccn_marks[i])
-                    print("DBE        :", dbe_marks[i])
-                    print("Python     :", python_marks[i])
-                    print("Java       :", java_marks[i])
-                    print("Maths      :", maths_marks[i])
-                    print("Total      :", totals[i])
-                    print("Percentage :", percentages[i], "%")
-                    print("Grade      :", grade)
-                    print("Status     :", status)
-                    print("-" * 35)
+                    show_report(i)
 
         else:
             print("Invalid Search Choice")
@@ -221,16 +159,17 @@ while True:
                 if percentages[i] > percentages[topper]:
                     topper = i
 
-            print("Topper :", names[topper])
-            print("Percentage :", percentages[topper], "%")
+            print("\n===== CLASS TOPPER =====")
+            print()
+            show_report(topper)
+
             
     elif ch == 5:
         print("Thank You!")
         break
 
-    elif ch < 1 or ch > 5:
-        print("Invalid Choice")
-
+    else:
+        print("Invalid choice")
 
 
 

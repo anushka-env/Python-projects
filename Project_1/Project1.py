@@ -1,4 +1,4 @@
-
+# Grocery bill calculator using basics of python
 name = input("Enter user name: ")
 rice_qty = int(input("Enter the quantity of rice(kg): "))
 wheat_qty = int(input("Enter the quantity of wheat(kg): "))
@@ -9,20 +9,27 @@ rice_price = rice_qty * 60
 wheat_price = wheat_qty * 40
 sugar_price = sugar_qty * 50
 milk_price = milk_qty * 30
-total = rice_price + wheat_price + sugar_price + milk_price
-gst = 12
+sub_total = rice_price + wheat_price + sugar_price + milk_price
+gst = 0.05 * sub_total
 
-print("\n ======= Grocery Bill ======= \n")
-print("Customer name: ",name)
-print(" Sl_no.    Items    Price(1kg/litre)  Quantity      Total_amt")
-print(" 1.       Rice      ",60,             rice_qty,     rice_price)
-print(" 2.       Wheat     ",40,             wheat_qty ,   wheat_price)
-print(" 3.       Sugar     ",50,             sugar_qty  ,  sugar_price)
-print(" 4.       Milk      ",30,             milk_qty ,    milk_price)
-print("\nSubtotal = ", total)
+print("\n======= Grocery Bill =======\n")
+print("Customer name:", name)
+print("-" * 65)
+print(f"{'Sl No':<8}{'Item':<10}{'Price':<12}{'Quantity':<12}{'Total':<10}")
+print("-" * 65)
 
-print("--------------------")
-print("Final amount = ",total)
-print("--------------------")
-print("\n -- Thankyou for visiting -- \n")
+print(f"{1:<8}{'Rice':<10}{60:<12}{rice_qty:<12}{rice_price:<10}")
+print(f"{2:<8}{'Wheat':<10}{40:<12}{wheat_qty:<12}{wheat_price:<10}")
+print(f"{3:<8}{'Sugar':<10}{50:<12}{sugar_qty:<12}{sugar_price:<10}")
+print(f"{4:<8}{'Milk':<10}{30:<12}{milk_qty:<12}{milk_price:<10}")
 
+print("-" * 65)
+print("Subtotal =", sub_total)
+print("GST =", gst)
+print("-" * 65)
+
+total = sub_total + gst
+
+print("Final Amount =", total)
+print("-" * 65)
+print("Thank you for visiting!")
